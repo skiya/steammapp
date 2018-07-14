@@ -1,0 +1,8 @@
+<import src='swiper/swiper-tpl.wxml'/>
+<view class='featured-container'>
+  <template is='swiperTpl' data='{{...featured}}'/>
+</view>
+
+<view class='special-container'>
+  <template is='swiperTpl' data='{{...specials}}'/>
+</view>

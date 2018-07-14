@@ -1,0 +1,148 @@
+/* pages/games/game-detail/game-detail.wxss */
+
+page{
+  background-color: #163b56;
+}
+
+.game-name-container{
+  display: flex;
+  margin-left: 5px;
+  width: 100%;
+}
+
+.game-name-container text{
+  font-size: 40px;
+  color: #59acdc;
+}
+
+.price-container{
+  display: flex;
+  flex-direction: row;
+  background-color: #4c6b22;
+  height: 24px;
+  align-items: center;
+}
+
+.price-header{
+  font-size: 14px;
+  color: #a3cf06;
+  margin-left: 5px;
+  width: 70%;
+}
+
+.discount-container{
+  color: #a3cf06;
+  margin-left: 0;
+  width: 100rpx;
+}
+
+.price{
+  justify-content: center;
+  margin:auto 0 auto auto;
+  background-color: #334454;
+}
+
+.txt{
+  font-size: 14px;
+  color: #59acdc;
+}
+
+.deltxt{
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.swiper-header{
+  margin:2px auto auto 5px;
+}
+
+.swiper-header text{
+  font-size: 14px;
+  color:#59acdc;
+}
+
+.main-swiper{
+  width: 750rpx;
+  height: 422rpx;
+  box-shadow: 4px 4px 2px #333;
+}
+
+.scshots{
+  width: 100%;
+  height: 422rpx;
+}
+
+.middle-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.platform-container{
+  display: flex;
+  flex-direction: row;
+  margin-right: 5px;
+}
+
+.platform-icon{
+  height: 20px;
+  width: 20px;
+}
+
+.platform-header{
+  font-size: 14px;
+  color: #59acdc;
+  width: 88px;
+}
+
+.info-container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+}
+
+.maker-container{
+  display: flex;
+  flex-direction: column;
+  width: 500rpx;
+}
+
+.maker-container text{
+  font-size: 12px;
+  color: #556772;
+}
+
+.lower-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.header{
+  font-size: 14px;
+  color: #59acdc;
+}
+
+.tags-container{
+  display: flex;
+  flex-direction: column;
+  width: 250rpx;
+}
+
+.tag text{
+  font-size: 14px;
+  color: #59acdc;
+  border: 1px solid #2a73a8;
+  border-radius: 4px;
+  background-color: #2a73a8;
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+.description-container{
+  width: 500rpx;
+}
+
+.description-container text{
+  font-size: 14px;
+  color:azure;
+  margin-right: 0;
+}

@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/games/games",
+    "pages/games/game-detail/game-detail"
+    
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#163b56",
+    "navigationBarTextStyle":"while"
+  }
+}

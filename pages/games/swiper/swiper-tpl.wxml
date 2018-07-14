@@ -1,0 +1,31 @@
+<template name='swiperTpl'>
+  <view class='swiper-container'>
+    <view class='swiper-header'>
+      <text class='header-text'>{{categoryTitle}}</text>
+    </view>
+    <swiper class='game-swiper' autoplay='true' interval='5000'>
+      <block wx:for='{{games}}' wx:for-item='game'>
+        <swiper-item>
+          <image class='game-img' src='{{game.coverImage}}' mode='aspectFit' catchtap='onGameTap' data-game-id='{{game.gameId}}' data-discounted='{{game.discounted}}'/>
+          <view class='game-summary'>
+            <view class='game-name-container'>
+              <text>{{game.name}}</text>
+            </view>
+            <view wx:if='{{game.discounted}}' class='discount-container'>
+              <text>{{'-'+game.discount+'%'}}</text>
+            </view>
+            <view class='price-container'>
+              <block wx:if='{{game.discounted}}'>
+                <text class='deltxt'>{{game.originalPrice}}</text>
+              </block>
+              <block wx:else>
+                <view class='blank'></view>
+              </block>
+              <text class='txt'>{{game.finalPrice}}</text>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</template>

@@ -1,0 +1,66 @@
+<!--pages/games/game-detail/game-detail.wxml-->
+<view class='game-detail-container'>
+  <view class='inner-container'>
+    <view class='game-name-container'>
+      <text>{{theGameDetail.name}}</text>
+    </view>
+    <view class='price-container'>
+      <view class='price-header'>当前价格</view>
+      <view wx:if='{{discounted}}' class='discount-container'>-{{theGameDetail.price.discount_percent}}%</view>
+      <view class='price'>
+        <text wx:if='{{discounted}}' class='deltxt'>￥{{theGameDetail.price.initial/100}}</text>
+        <text class='txt'>￥{{theGameDetail.price.final/100}}</text>
+      </view>
+    </view>
+    <view class='swiper-container'>
+      <view class='swiper-header'>
+        <text>游戏截图</text>
+      </view>
+      <swiper autoplay='true' class='main-swiper'>
+        <block wx:for='{{theGameDetail.screenshot}}' wx:for-item='scshot'>
+          <swiper-item>
+            <image class='scshots' src='{{scshot.path_full}}' mode='scaleToFill'/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class='info-container'>
+      <view class='middle-container'>
+        <view class='maker-container'>
+            <block wx:for='{{theGameDetail.developer}}' wx:for-item='dev'>
+              <text>开发商：{{dev}}</text>
+            </block>
+            <block wx:for='{{theGameDetail.publisher}}' wx:for-item='pub'>
+              <text>发行商：{{pub}}</text>
+            </block>
+            <text wx:if='{{!theGameDetail.release.coming_soon}}'>发行时间：{{theGameDetail.release.date}}</text>
+        </view>
+        <view class='platform-container'>
+          <view class='platform-header'>可游玩平台：</view>
+          <image class='platform-icon' mode='aspectFit' wx:if='{{theGameDetail.platforms.windows}}' src='/icon/win.png'/>
+          <image class='platform-icon' mode='aspectFit' wx:if='{{theGameDetail.platforms.mac}}' src='/icon/mac.png'/>
+          <image class='platform-icon' mode='aspectFit' wx:if='{{theGameDetail.platforms.linux}}' src='/icon/linux.png'/>
+        </view>
+      </view>
+      <view class='lower-container'>
+        <view class='tags-container'>
+          <view class='header'>标签</view>
+          <block wx:for='{{theGameDetail.category}}' wx:for-item='cat'>
+            <view class='tag'>
+              <text>{{cat.description}}</text>
+            </view>
+          </block>
+          <block wx:for='{{theGameDetail.genre}}' wx:for-item='gen'>
+            <view class='tag'>
+              <text>{{gen.description}}</text>
+            </view>
+          </block>
+        </view>
+        <view class='description-container'>
+          <view class='header'>简介</view>
+          <text>{{theGameDetail.description}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
